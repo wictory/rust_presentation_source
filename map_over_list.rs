@@ -9,7 +9,7 @@ fn main() {
     // of increasing numbers.
     let mut b = the_double.zip(std::iter::count(1,1)); 
     // Sum together elements in b using a fold
-    let s = a.fold(0, |ack, v| { ack + v }); 
+    let s = range(0,10).fold(0, |ack, v| { ack + v });
     for (c, i) in b {
         // Print out the tuples in b
         println!("{} = {}", i, c); 
